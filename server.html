@@ -1,0 +1,41 @@
+<html lang="en"> 
+<head>
+</head>
+<body onload="redirectTo()">
+
+
+
+<div >
+<button id="deeplink" onclick="redirectTo()">open deep link</button>
+</div>
+<script>
+  const url = window.location.pathname;
+  //  console.log(url);
+   var screen=window.location.search;
+  //  console.log(screen);
+   const completeurl1="currencyconverter://";
+    // console.log(completeurl);
+
+    // const completeurl1=completeurl.substring(1)
+    console.log(completeurl1);
+
+   const href="intent:#Intent;scheme=currencyconverter://c;package=com.vk3396.CurrencyConverter;end";
+  const isIos =!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  // console.log(isIos);
+function redirectTo(){
+  console.log(isIos)
+   if(isIos){
+    location.href=completeurl1;
+   }
+   else{
+    console.log("Android")
+    location.href=href;
+    console.log("Android")
+    
+   }
+  console.log(location.href)
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.vk3396.CurrencyConverter"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:4:3-75
+11-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:4:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:2:3-64
+12-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:3:3-77
+13-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:3:20-75
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:5:3-63
+14-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:5:20-61
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:6:3-78
+15-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:6:20-76
+16
+17    <queries>
+17-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:7:3-13:13
+18        <intent>
+18-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:8:5-12:14
+19            <action android:name="android.intent.action.VIEW" />
+19-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:9:7-58
+19-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:9:15-56
+20
+21            <category android:name="android.intent.category.BROWSABLE" />
+21-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:10:7-67
+21-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:10:17-65
+22
+23            <data android:scheme="https" />
+23-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:11:7-37
+23-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:11:13-35
+24        </intent>
+25        <!-- Query open documents -->
+26        <intent>
+26-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-21:18
+27            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+27-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-79
+27-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:21-76
+28        </intent>
+29    </queries>
+30
+31    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+31-->[com.facebook.flipper:flipper:0.54.0] C:\Users\hp\.gradle\caches\transforms-3\62ece1a98ef095db320a1cbbfb42e6fd\transformed\jetified-flipper-0.54.0\AndroidManifest.xml:16:5-76
+31-->[com.facebook.flipper:flipper:0.54.0] C:\Users\hp\.gradle\caches\transforms-3\62ece1a98ef095db320a1cbbfb42e6fd\transformed\jetified-flipper-0.54.0\AndroidManifest.xml:16:22-73
+32    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+33    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+33-->[com.android.installreferrer:installreferrer:1.0] C:\Users\hp\.gradle\caches\transforms-3\f6c360df79b3c76c4439467da366e525\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+33-->[com.android.installreferrer:installreferrer:1.0] C:\Users\hp\.gradle\caches\transforms-3\f6c360df79b3c76c4439467da366e525\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+34
+35    <application
+35-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:3-34:17
+36        android:name="com.vk3396.CurrencyConverter.MainApplication"
+36-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:16-47
+37        android:allowBackup="true"
+37-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:162-188
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.6.0] C:\Users\hp\.gradle\caches\transforms-3\63630bff35c5941492530625c68eb7d4\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+39        android:debuggable="true"
+40        android:icon="@mipmap/ic_launcher"
+40-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:81-115
+41        android:label="@string/app_name"
+41-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:48-80
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:116-161
+43        android:theme="@style/AppTheme"
+43-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:189-220
+44        android:usesCleartextTraffic="true" >
+44-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:14:221-256
+45        <meta-data
+45-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:15:5-82
+46            android:name="expo.modules.updates.ENABLED"
+46-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:15:16-59
+47            android:value="true" />
+47-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:15:60-80
+48        <meta-data
+48-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:16:5-93
+49            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+49-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:16:16-68
+50            android:value="44.0.0" />
+50-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:16:69-91
+51        <meta-data
+51-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:17:5-105
+52            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+52-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:17:16-80
+53            android:value="ALWAYS" />
+53-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:17:81-103
+54        <meta-data
+54-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:18:5-99
+55            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+55-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:18:16-79
+56            android:value="0" />
+56-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:18:80-97
+57        <meta-data
+57-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:19:5-128
+58            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+58-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:19:16-67
+59            android:value="https://exp.host/@vk3396/CurrencyConverter" />
+59-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:19:68-126
+60
+61        <activity
+61-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:5-32:16
+62            android:name="com.vk3396.CurrencyConverter.MainActivity"
+62-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:15-43
+63            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+63-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:77-154
+64            android:label="@string/app_name"
+64-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:44-76
+65            android:launchMode="singleTask"
+65-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:155-186
+66            android:screenOrientation="portrait"
+66-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:276-312
+67            android:theme="@style/Theme.App.SplashScreen"
+67-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:230-275
+68            android:windowSoftInputMode="adjustResize" >
+68-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:20:187-229
+69            <intent-filter>
+69-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:21:7-24:23
+70                <action android:name="android.intent.action.MAIN" />
+70-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:22:9-60
+70-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:22:17-58
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:23:9-68
+72-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:23:19-66
+73            </intent-filter>
+74            <intent-filter>
+74-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:25:7-31:23
+75                <action android:name="android.intent.action.VIEW" />
+75-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:9:7-58
+75-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:9:15-56
+76
+77                <category android:name="android.intent.category.DEFAULT" />
+77-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:27:9-67
+77-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:27:19-65
+78                <category android:name="android.intent.category.BROWSABLE" />
+78-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:10:7-67
+78-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:10:17-65
+79
+80                <data android:scheme="currencyconverter" />
+80-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:11:7-37
+80-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:11:13-35
+81                <data android:scheme="com.vk3396.CurrencyConverter" />
+81-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:11:7-37
+81-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:11:13-35
+82            </intent-filter>
+83        </activity>
+84        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+84-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:33:5-81
+84-->C:\Users\hp\Desktop\ReactNative\CurrencyConverter\android\app\src\main\AndroidManifest.xml:33:15-79
+85
+86        <provider
+86-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-34:20
+87            android:name="expo.modules.filesystem.FileSystemFileProvider"
+87-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-74
+88            android:authorities="com.vk3396.CurrencyConverter.FileSystemFileProvider"
+88-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-74
+89            android:exported="false"
+89-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-37
+90            android:grantUriPermissions="true" >
+90-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-47
+91            <meta-data
+91-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-33:70
+92                android:name="android.support.FILE_PROVIDER_PATHS"
+92-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:17-67
+93                android:resource="@xml/file_system_provider_paths" />
+93-->[:expo-file-system] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:17-67
+94        </provider>
+95
+96        <meta-data
+96-->[:expo-modules-core] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-modules-core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:89
+97            android:name="org.unimodules.core.AppLoader#react-native-headless"
+97-->[:expo-modules-core] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-modules-core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-79
+98            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+98-->[:expo-modules-core] C:\Users\hp\Desktop\ReactNative\CurrencyConverter\node_modules\expo-modules-core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-86
+99    </application>
+100
+101</manifest>
