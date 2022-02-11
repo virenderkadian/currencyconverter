@@ -2,7 +2,6 @@ import React from "react";
 import Constants, { AppOwnership } from "expo-constants";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import * as Linking from "expo-linking";
 
 import Home from "../Screens/Home";
 import Options from "../Screens/Options";
@@ -13,8 +12,8 @@ import { ConversionContextProvider } from "../utils/conversionContext";
 const isStandalone = Constants.appOwnership === AppOwnership.Standalone;
 const MainStack = createStackNavigator();
 
-const prefix = Linking.createURL(isStandalone ? "" : "/");
-// const prefix = "currencyconverter://";
+// const prefix = Linking.createURL(isStandalone ? "" : "/");
+const prefix = "currencyconverter://";
 const linking = {
   prefixes: [prefix],
   config: {
@@ -22,18 +21,19 @@ const linking = {
       Home: {
         path: "a",
       },
-      Options: "b",
-      Links: "c",
+      Options: {
+        path: "b",
+      },
+      Links: {
+        path: "c",
+      },
     },
   },
 };
+console.log(linking, "Linking");
 
 const MainStackScreen = () => (
-  <MainStack.Navigator
-    //headerMode="none"
-    //initialRouteName="CurrencyList"
-    linking
-  >
+  <MainStack.Navigator>
     <MainStack.Screen
       name="Home"
       component={Home}

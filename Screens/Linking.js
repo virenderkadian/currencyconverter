@@ -78,11 +78,6 @@ export default ({ navigation }) => {
 
   const [scrollEnabled, setScrollEnabled] = useState(false);
 
-  function handleDeepLink(event) {
-    let data = Linking.parse(event.url);
-    setData(data);
-  }
-
   useEffect(() => {
     const showListener = Keyboard.addListener("keyboardDidShow", () => {
       setScrollEnabled(true);
@@ -90,20 +85,23 @@ export default ({ navigation }) => {
     const hideListener = Keyboard.addListener("keyboardDidHide", () => {
       setScrollEnabled(false);
     });
+    Linking.addEventListener("url", handleDeepLink);
     async function getInitialURL() {
       const initialURL = await Linking.getInitialURL();
       console.log(initialURL, " : initial url");
 
       if (initialURL) {
-        let Id = initialURL.split("?id=");
-        setId(Id[Id.length - 1]);
-        console.log(Id, "Id");
+        const { path, queryParams } = Linking.parse(initialURL);
+        setId(queryParams);
         setData(Linking.parse(initialURL));
       }
     }
-    Linking.addEventListener("url", handleDeepLink);
     if (!data) {
       getInitialURL();
+    }
+    function handleDeepLink(event) {
+      let data = Linking.parse(event.url);
+      setData(data);
     }
     return () => {
       showListener.remove();
@@ -145,7 +143,10 @@ export default ({ navigation }) => {
           />
         </View>
         <Text style={styles.headerText}>Currency Converter</Text>
-        <Text Id>Id {Id ? Id : "Not received from deep link"} </Text>
+        {/* <Text>InitialURL {data} </Text> */}
+        <Text>
+          Id {Id ? JSON.stringify(Id) : "Not received from deep link"}{" "}
+        </Text>
         <View style={{ height: screen.height * 0.33 }} />
       </ScrollView>
     </View>

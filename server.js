@@ -6,8 +6,5 @@ app.listen(3000, () => {
 });
 
 app.get("/*", (req, res) => {
-  var url = req.url;
-  //   console.log(url);
-
   res.sendFile(__dirname + "/server.html");
 });

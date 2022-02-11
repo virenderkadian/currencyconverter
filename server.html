@@ -1,41 +1,34 @@
-<html lang="en"> 
-<head>
-</head>
-<body onload="redirectTo()">
-
-
-
-<div >
-<button id="deeplink" onclick="redirectTo()">open deep link</button>
-</div>
-<script>
-  const url = window.location.pathname;
-  //  console.log(url);
-   var screen=window.location.search;
-  //  console.log(screen);
-   const completeurl1="currencyconverter://";
-    // console.log(completeurl);
-
-    // const completeurl1=completeurl.substring(1)
-    console.log(completeurl1);
-
-   const href="intent:#Intent;scheme=currencyconverter://c;package=com.vk3396.CurrencyConverter;end";
-  const isIos =!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-  // console.log(isIos);
-function redirectTo(){
-  console.log(isIos)
-   if(isIos){
-    location.href=completeurl1;
-   }
-   else{
-    console.log("Android")
-    location.href=href;
-    console.log("Android")
-    
-   }
-  console.log(location.href)
-
-}
-</script>
-</body>
+<html lang="en">
+  <body onload="redirectTo()">
+    <script>
+      const searchResult = window.location.search;
+      const params = new URLSearchParams(searchResult);
+      const screen = params.get("screen");
+      const id = params.get("id");
+      const appscheme = "currencyconverter://";
+      const completeURL = appscheme + screen + "?id=" + id;
+      const href =
+        "intent:#Intent;scheme=" +
+        completeURL +
+        ";package=com.vk3396.CurrencyConverter;end";
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      function redirectTo() {
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          location.href = appscheme;
+          setTimeout(function () {
+            window.location =
+              "https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896";
+          }, 25);
+        } else if (/android/i.test(userAgent)) {
+          setTimeout(function () {
+            window.location =
+              "https://play.google.com/store/apps/details?id=com.application.zomato";
+          }, 250);
+          location.href = href;
+        } else if (/windows/i.test(userAgent)) {
+          window.location.href = "http://facebook.com";
+        }
+      }
+    </script>
+  </body>
 </html>

@@ -8,7 +8,7 @@ com/vk3396/CurrencyConverter/ReactNativeFlipper.java
  com.vk3396.CurrencyConverter.ReactNativeFlipper$2$1
 com/vk3396/CurrencyConverter/BuildConfig.java
  com.vk3396.CurrencyConverter.BuildConfig
-com/vk3396/CurrencyConverter/MainActivity.java
- com.vk3396.CurrencyConverter.MainActivity
 com/facebook/react/PackageList.java
  com.facebook.react.PackageList
+com/vk3396/CurrencyConverter/MainActivity.java
+ com.vk3396.CurrencyConverter.MainActivity

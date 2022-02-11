@@ -2,6 +2,7 @@ package com.vk3396.CurrencyConverter;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.content.Intent;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -18,6 +19,12 @@ public class MainActivity extends ReactActivity {
     setTheme(R.style.AppTheme);
     super.onCreate(null);
   }
+
+  @Override
+  public void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    setIntent(intent);
+}
 
   /**
    * Returns the name of the main component registered from JavaScript.
