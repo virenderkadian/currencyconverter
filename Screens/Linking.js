@@ -78,6 +78,11 @@ export default ({ navigation }) => {
 
   const [scrollEnabled, setScrollEnabled] = useState(false);
 
+  function handleDeepLink(event) {
+    let data = Linking.parse(event.url);
+    setData(data);
+  }
+
   useEffect(() => {
     const showListener = Keyboard.addListener("keyboardDidShow", () => {
       setScrollEnabled(true);
@@ -85,7 +90,6 @@ export default ({ navigation }) => {
     const hideListener = Keyboard.addListener("keyboardDidHide", () => {
       setScrollEnabled(false);
     });
-    Linking.addEventListener("url", handleDeepLink);
     async function getInitialURL() {
       const initialURL = await Linking.getInitialURL();
       console.log(initialURL, " : initial url");
@@ -96,12 +100,9 @@ export default ({ navigation }) => {
         setData(Linking.parse(initialURL));
       }
     }
+    Linking.addEventListener("url", handleDeepLink);
     if (!data) {
       getInitialURL();
-    }
-    function handleDeepLink(event) {
-      let data = Linking.parse(event.url);
-      setData(data);
     }
     return () => {
       showListener.remove();
