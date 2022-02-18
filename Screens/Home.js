@@ -19,6 +19,7 @@ import { Button } from "../components/Button";
 import { format } from "date-fns";
 import { Entypo } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
+import { useRoute } from "@react-navigation/native";
 
 const screen = Dimensions.get("window");
 
@@ -79,14 +80,13 @@ export default ({ navigation }) => {
   const conversionRate = rates[quoteCurrency];
 
   const [scrollEnabled, setScrollEnabled] = useState(false);
-  const [data, setData] = useState(null);
-  const [Id, setId] = useState(null);
-
-  function handleDeepLink(event) {
-    let data = Linking.parse(event.url);
-    setData(data);
+  // const [data, setData] = useState(null);
+  // const [Id, setId] = useState(null);
+  const route = useRoute();
+  const rID = route.params;
+  function handleDeepLink() {
+    // Linking.removeEventListener("url");
   }
-  console.log(Id, "ID");
   useEffect(() => {
     const showListener = Keyboard.addListener("keyboardDidShow", () => {
       setScrollEnabled(true);
@@ -94,20 +94,7 @@ export default ({ navigation }) => {
     const hideListener = Keyboard.addListener("keyboardDidHide", () => {
       setScrollEnabled(false);
     });
-    async function getInitialURL() {
-      const initialURL = await Linking.getInitialURL();
-      console.log(initialURL, " : initial url");
-
-      if (initialURL) {
-        const { path, queryParams } = Linking.parse(initialURL);
-        setId(queryParams);
-        setData(Linking.parse(initialURL));
-      }
-    }
     Linking.addEventListener("url", handleDeepLink);
-    if (!data) {
-      getInitialURL();
-    }
     return () => {
       showListener.remove();
       hideListener.remove();
@@ -129,8 +116,7 @@ export default ({ navigation }) => {
           </TouchableOpacity>
         </SafeAreaView>
         <View>
-          <Text>{Id ? JSON.stringify(Id) : "not thru deep link"}</Text>
-          {/* <Text>{query.get("hostname")}</Text> */}
+          <Text>{rID ? JSON.stringify(rID) : "not thru deep link"}</Text>
         </View>
         <View style={styles.logoContainer}>
           <Image

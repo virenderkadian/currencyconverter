@@ -15,6 +15,7 @@ import colors from "../Constants/colors";
 import { ConversionContext } from "../utils/conversionContext";
 import { Entypo } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 const screen = Dimensions.get("window");
 
@@ -69,8 +70,12 @@ const styles = StyleSheet.create({
   optionText: {},
 });
 export default ({ navigation }) => {
-  const [data, setData] = useState(null);
-  const [Id, setId] = useState(null);
+  // const [data, setData] = useState(null);
+  // const [Id, setId] = useState(null);
+  // const nav = useNavigation();
+  const route = useRoute();
+
+  let rID = route.params;
 
   const { quoteCurrency, rates } = useContext(ConversionContext);
 
@@ -79,8 +84,10 @@ export default ({ navigation }) => {
   const [scrollEnabled, setScrollEnabled] = useState(false);
 
   function handleDeepLink(event) {
-    let data = Linking.parse(event.url);
-    setData(data);
+    // let data = Linking.parse(event.url);
+    // setData(data);
+    // setId(result);
+    // Linking.removeEventListener("url");
   }
 
   useEffect(() => {
@@ -90,20 +97,7 @@ export default ({ navigation }) => {
     const hideListener = Keyboard.addListener("keyboardDidHide", () => {
       setScrollEnabled(false);
     });
-    async function getInitialURL() {
-      const initialURL = await Linking.getInitialURL();
-      console.log(initialURL, " : initial url");
-
-      if (initialURL) {
-        const { path, queryParams } = Linking.parse(initialURL);
-        setId(queryParams);
-        setData(Linking.parse(initialURL));
-      }
-    }
     Linking.addEventListener("url", handleDeepLink);
-    if (!data) {
-      getInitialURL();
-    }
     return () => {
       showListener.remove();
       hideListener.remove();
@@ -144,9 +138,8 @@ export default ({ navigation }) => {
           />
         </View>
         <Text style={styles.headerText}>Currency Converter</Text>
-        {/* <Text>InitialURL {data} </Text> */}
         <Text>
-          Id {Id ? JSON.stringify(Id) : "Not received from deep link"}{" "}
+          Id {rID ? JSON.stringify(rID) : "Not received from deep link"}{" "}
         </Text>
         <View style={{ height: screen.height * 0.33 }} />
       </ScrollView>

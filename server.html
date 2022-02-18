@@ -14,7 +14,7 @@
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       function redirectTo() {
         if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          location.href = appscheme;
+          location.href = completeURL;
           setTimeout(function () {
             window.location =
               "https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896";
@@ -23,7 +23,7 @@
           setTimeout(function () {
             window.location =
               "https://play.google.com/store/apps/details?id=com.application.zomato";
-          }, 250);
+          }, 3250);
           location.href = href;
         } else if (/windows/i.test(userAgent)) {
           window.location.href = "http://facebook.com";

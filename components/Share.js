@@ -8,7 +8,7 @@ export const ShareExample = () => {
         title: "Check out my app",
         message:
           "Check out my app \n" +
-          "http://192.168.29.186:3000/Prod1?screen=c&&id=100",
+          "https://y7zgnxfk9k.execute-api.ap-south-1.amazonaws.com/Prod1?screen=c&&id=100",
         // message: "Check out my app",
       });
       if (result.action === Share.sharedAction) {

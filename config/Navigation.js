@@ -1,5 +1,4 @@
-import React from "react";
-import Constants, { AppOwnership } from "expo-constants";
+import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -9,10 +8,7 @@ import CurrencyList from "../Screens/CurrencyList";
 import Links from "../Screens/Linking";
 
 import { ConversionContextProvider } from "../utils/conversionContext";
-const isStandalone = Constants.appOwnership === AppOwnership.Standalone;
 const MainStack = createStackNavigator();
-
-// const prefix = Linking.createURL(isStandalone ? "" : "/");
 const prefix = "currencyconverter://";
 const linking = {
   prefixes: [prefix],
@@ -30,7 +26,6 @@ const linking = {
     },
   },
 };
-console.log(linking, "Linking");
 
 const MainStackScreen = () => (
   <MainStack.Navigator>
@@ -51,10 +46,12 @@ const MainStackScreen = () => (
   </MainStack.Navigator>
 );
 
-export default () => (
-  <NavigationContainer linking={linking} uriPrefix={prefix}>
-    <ConversionContextProvider>
-      <MainStackScreen />
-    </ConversionContextProvider>
-  </NavigationContainer>
-);
+export default () => {
+  return (
+    <NavigationContainer linking={linking} uriPrefix={prefix}>
+      <ConversionContextProvider>
+        <MainStackScreen />
+      </ConversionContextProvider>
+    </NavigationContainer>
+  );
+};
